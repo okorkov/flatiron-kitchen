@@ -1,0 +1,10 @@
+<h1>Ingredients # <%="#{@ingredient.id} - #{@ingredient.name}"%></h1>
+
+<h4>Has been found in <%=@ingredient.recipes.size%> recipes:</h4>
+
+<%@ingredient.recipes.each do |recipe|%>
+  <%=link_to recipe.name, recipe%>
+<%end%>
+
+<br><br>
+<h3><%=link_to 'Edit Ingredient', edit_ingredient_path(@ingredient)%></h3>
